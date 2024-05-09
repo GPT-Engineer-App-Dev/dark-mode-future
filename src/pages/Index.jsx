@@ -6,14 +6,19 @@ const Index = () => {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      const response = await fetch('https://your-supabase-url/rest/v1/events', {
-         headers: {
-            'apikey': 'YOUR_ANON_KEY',
-            'Authorization': 'Bearer YOUR_ANON_KEY'
-         }
-      });
-      const data = await response.json();
-      setEvents(data);
+      try {
+        const response = await fetch(`${process.env.REACT_APP_SUPABASE_URL}/rest/v1/events`, {
+          headers: {
+            'apikey': process.env.REACT_APP_SUPABASE_ANON_KEY,
+            'Authorization': 'Bearer ' + process.env.REACT_APP_SUPABASE_ANON_KEY
+          }
+        });
+        if (!response.ok) throw new Error('Failed to fetch events');
+        const data = await response.json();
+        setEvents(data);
+      } catch (error) {
+        console.error('Error fetching events:', error);
+      }
     };
 
     fetchEvents();
