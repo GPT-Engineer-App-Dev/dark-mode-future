@@ -9,7 +9,7 @@ const Index = () => {
           Join us to explore the latest trends and innovations in software development.
         </Text>
         <Button colorScheme="teal" size="lg" variant="solid" style={{ boxShadow: '0 0 12px rgba(0, 128, 128, 0.8)' }}>
-          Register Now
+          Subscribe to Updates
         </Button>
       </VStack>
     </Container>
