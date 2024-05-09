@@ -6,8 +6,12 @@ const Index = () => {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      // Ensure API key is not exposed in the frontend code
-      const response = await fetch('/api/events');
+      const response = await fetch('https://your-supabase-url/rest/v1/events', {
+         headers: {
+            'apikey': 'YOUR_ANON_KEY',
+            'Authorization': 'Bearer YOUR_ANON_KEY'
+         }
+      });
       const data = await response.json();
       setEvents(data);
     };
