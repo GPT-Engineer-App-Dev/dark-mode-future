@@ -43,7 +43,7 @@ const Index = () => {
 };
 
 const EventCard = ({ name, date }) => (
-  <Box bg="white" p={4} boxShadow="md" borderRadius="lg">
+  <Box bg="gray.100" p={4} boxShadow="md" borderRadius="lg">
     <Text fontWeight="bold">{name}</Text>
     <Text>{new Date(date).toLocaleDateString()}</Text>
   </Box>
