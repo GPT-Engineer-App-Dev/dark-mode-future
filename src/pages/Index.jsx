@@ -44,8 +44,8 @@ const Index = () => {
 
 const EventCard = ({ name, date }) => (
   <Box bg="white" p={4} boxShadow="md" borderRadius="lg">
-    <Text fontWeight="bold">{name}</Text>
-    <Text>{new Date(date).toLocaleDateString()}</Text>
+    <Text fontWeight="bold" fontSize="lg">{name}</Text>
+    <Text fontSize="md">{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</Text>
   </Box>
 );
 
