@@ -7,7 +7,7 @@ const Index = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('https://ltgfyospwvvjqtqpcqoe.supabase.co/api/rest/events', {
+        const response = await fetch('https://ltgfyospwvvjqtqpcqoe.supabase.co/v1/rest/events', {
           headers: {
             'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx0Z2Z5b3Nwd3Z2anF0cXBjcW9lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUyNjI0OTQsImV4cCI6MjAzMDgzODQ5NH0.S7VTW-mJ3HqpdE4xnIFh3Gl0Je0X8PUcuaOv_yFFXAo',
             'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx0Z2Z5b3Nwd3Z2anF0cXBjcW9lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTUyNjI0OTQsImV4cCI6MjAzMDgzODQ5NH0.S7VTW-mJ3HqpdE4xnIFh3Gl0Je0X8PUcuaOv_yFFXAo'
