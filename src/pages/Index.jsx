@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { Box, Text, VStack, Heading, Button, SimpleGrid, Card } from '@chakra-ui/react';
+import { useEffect, useState, Container, Text, VStack, Heading, Button, SimpleGrid, Box } from '@chakra-ui/react';
 
 const [events, setEvents] = useState([]);
 
