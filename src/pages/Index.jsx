@@ -7,7 +7,7 @@ const Index = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_SUPABASE_URL}/rest/v1/events`, {
+        const response = await fetch('https://ltgfyospwvvjqtqpcqoe.supabase.co/api/rest/events', {
           headers: {
             'apikey': process.env.REACT_APP_SUPABASE_ANON_KEY,
             'Authorization': 'Bearer ' + process.env.REACT_APP_SUPABASE_ANON_KEY
